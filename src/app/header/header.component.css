@@ -1,0 +1,267 @@
+.offcanvas-menu-wrapper {
+    display: none; /* Masqué par défaut */
+}
+
+.show-offcanvas-menu-wrapper {
+    display: block; /* Affiché quand le menu est ouvert */
+}
+
+@media only screen and (max-width: 768px) {
+    .canvas-menu {
+        background-color: #fff;
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: 1000;
+        display: block;
+        color: #000;
+    }
+
+    .canvas-menu ul li {
+        padding: 15px;
+        text-align: center;
+    }
+}
+
+.canvas-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 24px;
+    color: #333;
+}
+
+.fa-close:hover {
+    color: red; /* Indicateur visuel au survol */
+}
+
+@media only screen and (max-width: 767px) {
+    .offcanvas-menu-wrapper.show-offcanvas-menu-wrapper {
+        left: 0;
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .offcanvas-menu-wrapper {
+        position: fixed;
+        left: -300px;
+        top: 0;
+        width: 300px;
+        z-index: 999;
+        background: #ffffff;
+        overflow-y: auto;
+        height: 100%;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.5s ease;
+        padding: 50px 30px 30px 30px;
+        display: block;
+    }
+
+    .canvas-close {
+        position: absolute;
+        right: 30px;
+        top: 20px;
+        font-size: 30px;
+        cursor: pointer;
+        color: #333;
+    }
+
+    .offcanvas-menu ul {
+        padding: 0;
+        list-style: none;
+    }
+
+    .offcanvas-menu ul li {
+        margin-bottom: 20px;
+    }
+
+    .offcanvas-menu ul li a {
+        font-size: 16px;
+        color: #333;
+        text-decoration: none;
+        transition: color 0.3s ease;
+    }
+
+    .offcanvas-menu ul li a:hover {
+        color: #007bff;
+    }
+}
+
+
+.offcanvas-menu-wrapper {
+    display: none; /* Masqué par défaut */
+    position: fixed;
+    top: 0;
+    left: -300px;
+    width: 300px;
+    height: 100%;
+    background-color: #fff;
+    z-index: 9999;
+    padding: 20px;
+    transition: left 0.3s ease-in-out;
+    overflow-y: auto;
+}
+
+.show-offcanvas-menu-wrapper {
+    display: block;
+    left: 0; /* Le menu se glisse depuis la gauche */
+}
+
+.canvas-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.fa-close:hover {
+    color: red; /* Couleur au survol */
+}
+
+/* Styles pour le menu offcanvas */
+.canvas-menu ul {
+    padding: 0;
+    list-style: none;
+}
+
+.canvas-menu ul li {
+    margin-bottom: 20px;
+}
+
+.canvas-menu ul li a {
+    font-size: 18px;
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.canvas-menu ul li a:hover {
+    color: #007bff; /* Couleur au survol */
+}
+
+/* Styles pour l'ouverture du menu sur mobile */
+@media only screen and (max-width: 768px) {
+    .canvas-open {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        font-size: 24px;
+        cursor: pointer;
+        z-index: 1000;
+    }
+
+    .offcanvas-menu-wrapper {
+        left: -300px; /* Position hors écran par défaut */
+    }
+
+    .show-offcanvas-menu-wrapper {
+        left: 0; /* Lorsque le menu est ouvert */
+    }
+}
+/* Styles de base pour le menu offcanvas */
+.offcanvas-menu-wrapper {
+    display: none; /* Masqué par défaut */
+    position: fixed;
+    top: 0;
+    left: -300px;
+    width: 300px;
+    height: 100%;
+    background-color: #fff;
+    z-index: 9999;
+    padding: 20px;
+    transition: left 0.3s ease-in-out, opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+    overflow-y: auto;
+    opacity: 0;
+    visibility: hidden;
+}
+
+/* Menu affiché */
+.show-offcanvas-menu-wrapper {
+    display: block;
+    left: 0; /* Le menu se glisse depuis la gauche */
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Bouton "X" (fermeture du menu) */
+.canvas-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 24px;
+    color: #333;
+}
+
+.canvas-close:hover .fa-close {
+    color: red; /* Changement de couleur au survol */
+}
+
+/* Liste du menu */
+.canvas-menu ul {
+    padding: 0;
+    list-style: none;
+}
+
+.canvas-menu ul li {
+    margin-bottom: 20px;
+}
+
+.canvas-menu ul li a {
+    font-size: 18px;
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.canvas-menu ul li a:hover {
+    color: #007bff; /* Couleur au survol */
+}
+
+/* Styles pour l'ouverture du menu sur mobile */
+@media only screen and (max-width: 768px) {
+    .canvas-open {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        font-size: 24px;
+        cursor: pointer;
+        z-index: 1000;
+    }
+
+    .offcanvas-menu-wrapper {
+        left: -300px; /* Position hors écran par défaut */
+    }
+
+    .show-offcanvas-menu-wrapper {
+        left: 0; /* Lorsque le menu est ouvert */
+    }
+
+    .canvas-menu ul li {
+        padding: 15px;
+        text-align: center;
+    }
+}
+
+/* Pour les écrans plus petits (max-width: 767px) */
+@media only screen and (max-width: 767px) {
+    .offcanvas-menu-wrapper {
+        width: 100%;
+        padding: 50px 30px 30px 30px;
+    }
+
+    .canvas-close {
+        right: 30px;
+        top: 20px;
+        font-size: 30px;
+    }
+
+    .canvas-menu ul li a {
+        font-size: 16px;
+    }
+}

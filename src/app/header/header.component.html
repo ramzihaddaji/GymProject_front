@@ -1,0 +1,85 @@
+<header class="header-section">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-3">
+                <div class="logo">
+                    <a [routerLink]="['/acceuil']">
+                        <img src="assets/img/logo.png" alt="Logo">
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <nav class="nav-menu">
+                    <ul>
+                        <li class="active"><a [routerLink]="['/acceuil']">Home</a></li>
+                        <li><a [routerLink]="['/aboutUS']">About Us</a></li>
+                        <li><a [routerLink]="['/classDetails']">Classes</a></li>
+                        <li><a [routerLink]="['/services']">Services</a></li>
+                        <li><a [routerLink]="['/team']">Our Team</a></li>
+                        <li><a href="#">Pages</a>
+                            <ul class="dropdown">
+                                <li><a [routerLink]="['/aboutUS']">About us</a></li>
+                                <li><a [routerLink]="['/classTimeable']">Classes timetable</a></li>
+                                <li><a [routerLink]="['/bmi']">Bmi calculator</a></li>
+                                <li><a [routerLink]="['/team']">Our team</a></li>
+                                <li><a [routerLink]="['/gallery']">Gallery</a></li>
+                                <li><a [routerLink]="['/blog']">Our blog</a></li>
+                                <li><a [routerLink]="['/404']">404</a></li>
+                            </ul>
+                        </li>
+                        <li><a [routerLink]="['/contact']">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="col-lg-3">
+                <div class="top-option">
+                    <div class="to-search search-switch">
+                        <i class="fa fa-search"></i>
+                    </div>
+                    <div class="to-social">
+                        <a href="#"><i class="fa fa-facebook"></i></a>
+                        <a href="#"><i class="fa fa-twitter"></i></a>
+                        <a href="#"><i class="fa fa-youtube-play"></i></a>
+                        <a href="#"><i class="fa fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Bouton pour ouvrir le menu offcanvas -->
+        <div class="canvas-open" (click)="openCanvasMenu()">
+            <i class="fa fa-bars"></i>
+        </div>
+    </div>
+</header>
+
+<!-- Offcanvas Menu Wrapper pour version mobile avec bouton X -->
+<div class="offcanvas-menu-wrapper" [ngClass]="{'show-offcanvas-menu-wrapper': isCanvasMenuOpen}">
+    <div class="canvas-close" (click)="closeCanvasMenu()">
+        <i class="fa fa-close"></i>
+    </div>
+    <nav class="canvas-menu mobile-menu">
+        <!-- Ajout du bouton "X" pour fermer le menu -->
+        <div class="canvas-close-btn" (click)="closeCanvasMenu()">
+            <i class="fa fa-close"></i>
+        </div>
+        <ul>
+            <li><a [routerLink]="['/acceuil']" (click)="closeCanvasMenu()">Home</a></li>
+            <li><a [routerLink]="['/aboutUS']" (click)="closeCanvasMenu()">About Us</a></li>
+            <li><a [routerLink]="['/classDetails']" (click)="closeCanvasMenu()">Classes</a></li>
+            <li><a [routerLink]="['/services']" (click)="closeCanvasMenu()">Services</a></li>
+            <li><a [routerLink]="['/team']" (click)="closeCanvasMenu()">Our Team</a></li>
+            <li><a href="#">Pages</a>
+                <ul class="dropdown">
+                    <li><a [routerLink]="['/aboutUS']" (click)="closeCanvasMenu()">About us</a></li>
+                    <li><a [routerLink]="['/classTimeable']" (click)="closeCanvasMenu()">Classes timetable</a></li>
+                    <li><a [routerLink]="['/bmi']" (click)="closeCanvasMenu()">Bmi calculator</a></li>
+                    <li><a [routerLink]="['/team']" (click)="closeCanvasMenu()">Our team</a></li>
+                    <li><a [routerLink]="['/gallery']" (click)="closeCanvasMenu()">Gallery</a></li>
+                    <li><a [routerLink]="['/blog']" (click)="closeCanvasMenu()">Our blog</a></li>
+                    <li><a [routerLink]="['/404']" (click)="closeCanvasMenu()">404</a></li>
+                </ul>
+            </li>
+            <li><a [routerLink]="['/contact']" (click)="closeCanvasMenu()">Contact</a></li>
+        </ul>
+    </nav>
+</div>
